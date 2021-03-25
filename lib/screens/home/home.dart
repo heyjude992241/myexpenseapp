@@ -10,14 +10,12 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [
-          SizedBox(
-            height: 50.0,
-            child: Category()      
-          ),
-        ],
-      ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.only(top:8.0, left: 8.0),
+          child: Category(),
+        )
+      )
     );
   }
 
