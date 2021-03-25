@@ -8,36 +8,43 @@ class Category extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('Goals', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),),
-            Text('See all', style: TextStyle(fontSize: 10.0, color: Colors.blue[200]),),
-          ],
+        Padding(
+          padding: const EdgeInsets.only(top:12.0, left: 12.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Goals', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),),
+              Text('See all', style: TextStyle(fontSize: 10.0, color: Colors.blue[200]),),
+            ],
+          ),
         ),
         Container(
           height: 210.0, 
+          padding: EdgeInsets.only(left: 12.0),
           color: Colors.grey[200],
           child: Goals()
         )
       ],
-    );
+      );
+  
   }
 }
 
 class Goals extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      scrollDirection: Axis.horizontal,
-      children: [
-        _buildGoal("iPad", "iPad baru 2021"),
-        _buildGoal("Motor baru", "YSuku"),
-        _buildGoal("Beli rumah", "Rumah RM1 juta"),
-        _buildGoal("Kereta", "Kereta Proton X70"),
-        _buildGoal("Hari tua", "Simpanan hari tua")
-      ],
-    );
+    return 
+      ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          _buildGoal("iPad", "iPad baru 2021"),
+          _buildGoal("Motor baru", "YSuku"),
+          _buildGoal("Beli rumah", "Rumah RM1 juta"),
+          _buildGoal("Kereta", "Kereta Proton X70"),
+          _buildGoal("Hari tua", "Simpanan hari tua")
+        ],
+      );
+
   }
 
   Widget _buildGoal(String title, String description){

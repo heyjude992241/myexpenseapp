@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spendmanager/screens/home/category.dart';
+import 'package:spendmanager/screens/home/user_bar.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -10,11 +11,13 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(top:8.0, left: 8.0),
-          child: Category(),
-        )
+      body: SafeArea(    
+        child: ListView(
+          children: [
+            UserBar(),
+            Category()
+          ],
+        ),      
       )
     );
   }
