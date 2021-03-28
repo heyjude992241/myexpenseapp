@@ -8,7 +8,7 @@ class UserBar extends StatelessWidget {
       child: Row(
         children: [
           Text('Hello Hafiz', 
-            style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold, color: Colors.black),
+            style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, color: Colors.black26),
           ),
         ],
       ),
